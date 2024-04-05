@@ -1,0 +1,42 @@
+package act1;
+
+import java.util.Scanner;
+
+public class Act1 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        
+        int dec;
+        String binario, hex, oct;
+        boolean salir;
+        
+        do {
+            System.out.println("Ingrese un número binario:");
+            binario=sc.nextLine();
+            salir = true;
+
+            for (int i = 0; i < binario.length(); i++) {
+                if (binario.charAt(i) != '1' && binario.charAt(i) != '0') {
+                    salir = false;
+                }
+            }
+
+            if (salir == false) {
+                System.out.println("ERROR, Ingrese numero valido");
+            }
+
+        } while (salir == false);
+
+        dec = (int) Long.parseLong(binario, 2);
+        oct = Integer.toOctalString(dec);
+        hex = Integer.toHexString(dec);
+
+        System.out.println("El número binario " + binario +" en: ");
+        System.out.println("Decimal: "+dec);
+        System.out.println("Octal: "+oct);
+        System.out.println("Hexadecimal: "+hex);
+
+    }
+}
