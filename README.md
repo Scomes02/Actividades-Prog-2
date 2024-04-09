@@ -1,2 +1,4 @@
-# Actividad-1
+# Actividades
 Conversor binario a octal/decimal/hexadecimal
+Clase Empleados
+
